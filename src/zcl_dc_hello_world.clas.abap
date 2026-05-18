@@ -25,8 +25,18 @@ CLASS zcl_dc_hello_world IMPLEMENTATION.
 *    output =
 ).
 
-*select * from /dmo/flight
-*  into table
-  ENDMETHOD.
+    SELECT * FROM /dmo/flight
+      INTO TABLE @DATA(lt_flight).
+
+      out->write(
+        EXPORTING
+          data   = lt_flight
+          name   = 'Voli'
+*        RECEIVING
+*          output =
+      ).
+
+
+      ENDMETHOD.
 
 ENDCLASS.
