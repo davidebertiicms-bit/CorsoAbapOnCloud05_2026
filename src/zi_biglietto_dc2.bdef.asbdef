@@ -1,0 +1,48 @@
+managed implementation in class ZBP_I_BIGLIETTO_DC2 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZI_BIGLIETTO_DC2 alias BIGLIETTO
+persistent table ZBIGLIETTO_DC2
+extensible
+draft table ZBIGLIETTO_DC2_D
+etag master LocalModifA
+lock master total etag ModifA
+authorization master( global )
+early numbering
+{
+//  field ( mandatory : create )
+
+
+  field ( readonly )
+  ID,
+   CreatoDa,
+   CreatoA,
+   ModifDa,
+   ModifA;
+
+//  field ( readonly : update )
+//   ID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZBIGLIETTO_DC2 corresponding extensible
+  {
+    ID = ID;
+    CreatoDa = CREATO_DA;
+    CreatoA = CREATO_A;
+    ModifDa = MODIF_DA;
+    ModifA = MODIF_A;
+    LocalModifA = local_modificato_a;
+  }
+
+}

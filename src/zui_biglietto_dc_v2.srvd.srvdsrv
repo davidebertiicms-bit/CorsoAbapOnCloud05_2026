@@ -1,0 +1,4 @@
+@EndUserText.label: 'Biglietto'
+define service Zui_biglietto_dc_v2 {
+  expose zc_biglietto_dc;
+}

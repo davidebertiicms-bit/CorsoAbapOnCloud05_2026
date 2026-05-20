@@ -1,0 +1,29 @@
+managed implementation in class zbp_i_biglietto_dc unique;
+strict ( 2 );
+
+define behavior for zi_biglietto_dc alias BIGLIETTO
+persistent table zbiglietto_dc
+lock master
+authorization master ( instance )
+etag master ModifA
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( mandatory : create, readonly : update )
+  IdBiglietto;
+  field ( readonly )
+  CreatoDa,
+  CreatoA,
+  ModifDa,
+  ModifA;
+
+  mapping for zbiglietto_dc
+    {
+      IdBiglietto = Id;
+      CreatoDa    = creato_da;
+      CreatoA     = creato_a;
+      ModifDa     = modif_da;
+      ModifA      = modif_a;
+    }
+}

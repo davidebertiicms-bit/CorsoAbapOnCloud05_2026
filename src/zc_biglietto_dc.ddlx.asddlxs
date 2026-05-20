@@ -1,0 +1,132 @@
+@Metadata.layer:#CORE
+@UI.headerInfo: {
+    typeName: 'Biglietto',
+    typeNamePlural: 'Biglietti',
+    title: {
+        value: 'IdBiglietto'
+    },
+    description: {
+        value: 'CreatoDa'
+    }
+}
+annotate view zc_biglietto_dc with
+{
+
+  //  @UI.facet: [{
+  //        id: 'ViewPrincipale',
+  //        purpose: #STANDARD,
+  //        position: 10,
+  //        label: 'Id',
+  //        type: #IDENTIFICATION_REFERENCE
+  //    }]
+
+  @UI.facet: [
+      {
+          id: 'Id',
+          purpose: #STANDARD,
+          position: 10,
+          label: 'Id',
+          type: #FIELDGROUP_REFERENCE,
+          targetQualifier: 'Id'
+      },
+      {
+          id: 'Datimodifica',
+          purpose: #STANDARD,
+          position: 20,
+          label: 'Dettaglio',
+          type: #FIELDGROUP_REFERENCE,
+          targetQualifier: 'Datimodifica'
+      }
+  ]
+
+
+  @UI: {
+        lineItem: [{
+            position: 10
+        }],
+        identification: [{
+            position: 10
+        }],
+        selectionField: [{
+            position: 10
+        }],
+    fieldGroup: [{
+    qualifier: 'Id',
+    position: 10
+}]
+    }
+  IdBiglietto;
+
+  @EndUserText.label: 'Creato da'
+  @UI: {
+    lineItem: [{
+        position: 20
+    }],
+    identification: [{
+        position: 20
+    }],
+    selectionField: [{
+        position: 20
+    }],
+    fieldGroup: [{
+    qualifier: 'Datimodifica',
+    position: 20
+}]
+}
+  CreatoDa;
+
+  @UI: {
+  lineItem: [{
+     position: 30
+  }],
+  identification: [{
+     position: 30
+  }],
+  selectionField: [{
+     position: 30
+  }],
+  fieldGroup: [{
+  qualifier: 'Datimodifica',
+  position: 30
+  }]
+  }
+  CreatoA;
+
+  @UI: {
+  lineItem: [{
+  position: 40
+  }],
+  identification: [{
+  position: 40
+  }],
+  selectionField: [{
+  position: 40
+  }],
+  fieldGroup: [{
+  qualifier: 'Datimodifica',
+  position: 40
+  }]
+  }
+  ModifA;
+  @EndUserText.label: 'Modificato Da'
+  @UI: {
+      lineItem: [{
+ position: 50,
+ hidden: true
+      }],
+      identification: [{
+ position: 50
+      }],
+      selectionField: [{
+ position: 50
+      }],
+      fieldGroup: [{
+      qualifier: 'Datimodifica',
+      position: 50
+  }]
+  }
+  ModifDa;
+
+  @UI.hidden: true
+  MODIFICATO;
+}

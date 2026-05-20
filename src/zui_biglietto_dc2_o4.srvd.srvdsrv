@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_BIGLIETTO_DC2'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_BIGLIETTO_DC2'
+  }
+}
+define service ZUI_BIGLIETTO_DC2_O4 provider contracts odata_v4_ui {
+  expose ZC_BIGLIETTO_DC2;
+}
