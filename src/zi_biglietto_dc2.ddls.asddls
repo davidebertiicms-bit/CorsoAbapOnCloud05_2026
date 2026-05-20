@@ -15,5 +15,7 @@ define root view entity ZI_BIGLIETTO_DC2
   @Semantics.systemDateTime.lastChangedAt: true
   modif_a as ModifA,
   @Semantics.systemDateTime.localInstanceLastChangedAt: true
-  local_modificato_a as LocalModifA
+  local_modificato_a as LocalModifA,
+  stato 
+
 }

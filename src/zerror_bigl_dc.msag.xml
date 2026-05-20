@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZERROR_BIGL_DC</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>cLASSE MESSAGGI</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZERROR_BIGL_DC</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>PER IL bIGLIETTO &amp;1 IL VALORE &amp;2 NON è UNO STATO VALIDO</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

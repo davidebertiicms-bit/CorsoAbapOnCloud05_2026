@@ -30,5 +30,6 @@ define root view entity ZC_BIGLIETTO_DC2
   }
   ModifA,
   LocalModifA,
+  stato,
   _BaseEntity
 }

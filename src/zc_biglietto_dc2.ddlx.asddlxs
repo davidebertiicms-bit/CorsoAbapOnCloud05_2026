@@ -14,10 +14,22 @@ annotate view ZC_BIGLIETTO_DC2 with
   } ]
   @UI.identification: [ {
     position: 10 
+  } ,
+   {
+    position: 10,
+    type: #FOR_ACTION,
+    dataAction: 'CustomDelete',
+    label: 'Elimina (custom)' 
   } ]
   @UI.lineItem: [ {
     position: 10 
-  } ]
+  }, 
+    {
+    position: 10,
+    type: #FOR_ACTION,
+    dataAction: 'CustomDelete',
+    label: 'Elimina (custom)' 
+  }]
   @UI.selectionField: [ {
     position: 10 
   } ]
@@ -66,6 +78,17 @@ annotate view ZC_BIGLIETTO_DC2 with
     position: 50 
   } ]
   ModifA;
+  @EndUserText.label: 'Stato'
+    @UI.identification: [ {
+    position: 15 
+  } ]
+  @UI.lineItem: [ {
+    position: 15 
+  } ]
+  @UI.selectionField: [ {
+    position: 15 
+  } ]
+  stato;
   
 
 }

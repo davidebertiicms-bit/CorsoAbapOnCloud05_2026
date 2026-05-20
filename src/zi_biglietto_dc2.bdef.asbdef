@@ -24,16 +24,19 @@ early numbering
 //  field ( readonly : update )
 //   ID;
 
-
-  create;
+validation ValidaStato on save { field stato ;}
+determination onSave on save { create ;}
+action CUSTOMdELETE result [1] $self;
+  create { default function GetDefaultsForCreate; }
   update;
-  delete;
+//  delete;
 
   draft action Activate optimized;
   draft action Discard;
   draft action Edit;
   draft action Resume;
   draft determine action Prepare;
+
 
   mapping for ZBIGLIETTO_DC2 corresponding extensible
   {
@@ -43,6 +46,7 @@ early numbering
     ModifDa = MODIF_DA;
     ModifA = MODIF_A;
     LocalModifA = local_modificato_a;
+    stato = stato;
   }
 
 }
